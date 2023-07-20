@@ -23,12 +23,12 @@ pipeline {
         }
        stage('Terraform plan') {
             steps {
-                sh 'terraform plan'
+                sh 'pwd;cd terraform/ ; terraform plan'
             }
         }
         stage('Terraform apply') {
             steps {
-                sh 'terraform apply --auto-approve'
+                sh 'pwd;cd terraform/ ; terraform apply --auto-approve'
             }
         }
         
