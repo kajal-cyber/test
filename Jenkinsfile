@@ -21,6 +21,11 @@ pipeline {
                  sh 'pwd;cd terraform/ ; terraform init'
             }
         }
+       stage('Terraform plan') {
+            steps {
+                sh 'pwd;cd terraform/ ; terraform plan'
+            }
+        }
      
         stage('Terraform apply') {
             steps {
